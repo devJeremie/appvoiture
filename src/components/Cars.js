@@ -3,7 +3,7 @@ import Wrapper from './Wrapper';
 
 const Car = ({children, color}) => {
 
-    const colorInfo = color ? (<p>Couleur: {color} </p>) : (<p>Couleur: Néant</p>);
+    const colorInfo = color ? <p>Couleur: {color} </p> : <p>Couleur: Néant</p>;
 
     return children && (
         <Wrapper>
