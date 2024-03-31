@@ -1,18 +1,17 @@
-import React from 'react'
-import Wrapper from './Wrapper';
+const Car = ({color, children, year}) => {
 
-const Car = ({children, color}) => {
+    const colorInfo = color ? <p>Couleur: {color}</p> : <p>Couleur: "Néant"</p>;
 
-    const colorInfo = color ? <p>Couleur: {color} </p> : <p>Couleur: Néant</p>;
+    if (children) {
+        return (
+            <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto'} }>
+                <p>Marque: { children }</p>
+                <p>Année: { year }</p>
+                {colorInfo}
+            </div>
+        )
+    }
 
-    return children && (
-        <Wrapper>
-            <p>Marque: {children}</p>
-            <p>{colorInfo}</p>
-        </Wrapper>
-    ) 
 }
-    
-
 
 export default Car
