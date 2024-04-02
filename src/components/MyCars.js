@@ -9,7 +9,7 @@ class Mycars extends Component {
             {name: 'Peugeot', color: 'green', year: 2018},
           ]
     }
-    
+
 //fonction pour vieillir un vehicule
     addtenYears = () => {
         const updatedState = this.state.voitures.map((param) =>{
@@ -41,23 +41,25 @@ class Mycars extends Component {
                 <h1>{this.props.title}</h1>
 
                 <button onClick={this.addtenYears}>+ 10 ans</button>
+                
                 {
                     this.state.voitures.map(({name, color, year}, index) => {
                         return(
+                            
                             <div key={index}>
-                                <Car 
+                                <Car
                                     nom={name}
                                     color={color}
                                     year={year}>
                                     {name}
                                 </Car>
-                                
+
                             </div>
                         )
                     })
                 }
             </div>
-           
+
         )
     }
 }
