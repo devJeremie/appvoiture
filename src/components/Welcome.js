@@ -10,7 +10,7 @@ const Welcome = () => {
             {/*Invoquer une fonction bonsoir avec un argument bonsoir et l'afficher */}
             <button onClick={() => bonsoir('Bonsoir')}>Invoquer une fonction avec argument bonsoir</button>
 
-            {/*lancer le console log bonne nuit apres le click sanas invoquer de fonction */}
+            {/*lancer le console log bonne nuit apres le click sans invoquer de fonction */}
             <button onClick={() =>console.log("Bonne nuit")}>Console log sur le bouton</button>
         </div>
     )
