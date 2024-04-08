@@ -27,12 +27,16 @@ class Form extends Component {
         })
     }
 
+    handleSubmit = e => {
+        e.preventDefault()
+    }
+
     render() {
   return (
     <div>
         <h1>Voici un formulaire</h1>
 
-        <form>
+        <form onSubmit={this.handleSubmit}>
             <div>
                 <label>Username</label>
                 <input type="text" value={this.state.username} onChange={this.handleUsername}/>
