@@ -1,7 +1,12 @@
 import { Component} from 'react'
+import styled from 'styled-components'
+
+const titreBlue = {
+    fontSize : '50px',  
+    color: '#3498db' 
+}
 
 class Form extends Component {
-
     state = {
         username: '',
         color: '',
@@ -32,13 +37,16 @@ class Form extends Component {
     }
 
     render() {
+
+        const myClass = this.props.head ? 'pink' : 'green';
+
   return (
     <div>
-        <h1>Voici un formulaire</h1>
+        <h1 style={{fontSize: 50,color: 'blue'}}>Voici un formulaire</h1>
 
         <form onSubmit={this.handleSubmit}>
             <div>
-                <label>Username</label>
+                <label style={titreBlue}>Username</label>
                 <input type="text" value={this.state.username} onChange={this.handleUsername}/>
             </div>
             <div>
@@ -59,11 +67,14 @@ class Form extends Component {
             <div>
                 <label>Commentaire</label>
                 <textarea value= {this.state.comment} onChange={this.handleComments}></textarea>
-            </div>
+            </div>            
         </form>
+          <p className= {myClass}>Style en props</p>      
     </div>
   )
     }
 }
 
 export default Form
+
+ 
