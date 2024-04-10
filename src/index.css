@@ -16,3 +16,7 @@ h1.styled{
   color: purple;
   text-transform: uppercase;
 }
+.bigFont {
+  font-size: 25px;
+  font-weight: bold;
+}

@@ -22,9 +22,10 @@ class App extends Component {
         <Welcome />
         <Maman />
         <Image />
-        <Form 
+        <Form />
+        {/* <Form 
           head={true}
-        />
+        /> */}
       </div>
     )
   }

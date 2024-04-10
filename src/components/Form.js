@@ -1,80 +1,44 @@
-import { Component} from 'react'
+import React, {Component} from 'react'
+import MyHead from './MyHeaderOne'
+import styles from './myCss.module.css'
 import styled from 'styled-components'
+import Btn from './CustomBtn'
 
-const titreBlue = {
-    fontSize : '50px',  
-    color: '#3498db' 
+const Title = styled.h1
+    `
+    color: purple;
+    font-size: 80px;
+    `
+const Button = styled.button
+    `
+    background: black;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 12px 13px;
+    border-radius: 10px;
+    `
+const success = {
+    backgroundColor: 'green',
+    color: 'black'
 }
 
+
 class Form extends Component {
-    state = {
-        username: '',
-        color: '',
-        colors: ["", "red", "green", "blue"],
-        comment: ''
-    }
-
-    handleUsername = e => {
-        this.setState({
-            username : e.target.value
-        })
-    }
-
-    handleColor = event => {
-        this.setState({
-            color : event.target.value
-        })
-    }
-
-    handleComments = event => {
-        this.setState({
-            comment : event.target.value
-        })
-    }
-
-    handleSubmit = e => {
-        e.preventDefault()
-    }
-
     render() {
-
-        const myClass = this.props.head ? 'pink' : 'green';
-
-  return (
-    <div>
-        <h1 style={{fontSize: 50,color: 'blue'}}>Voici un formulaire</h1>
-
-        <form onSubmit={this.handleSubmit}>
+        return (
             <div>
-                <label style={titreBlue}>Username</label>
-                <input type="text" value={this.state.username} onChange={this.handleUsername}/>
+                <h1 className={styles.green} >Un titre en vert</h1>
+                <MyHead />
+                <Title>Commentaire 1</Title>
+                <button className='btn btn-primary'>Valider</button>
+                <Button>Valider 2</Button>
+                <Btn 
+                    btnStyle={success}
+                > Cliquez sur ce bouton</Btn>
             </div>
-            <div>
-                <label>Couleur</label>
-                <select>
-                    <option value='vert'>Vert</option>
-                    <option value='rouge'>Rouge</option>
-                    <option value='bleu'>Bleu</option>
-                </select>
-                <select value={this.state.colors} onChange={this.handleColor}>
-                    {
-                        this.state.colors.map((color, index) => {
-                           return <option key={index} value={color}>{color}</option>
-                        })
-                    }
-                </select>
-            </div>
-            <div>
-                <label>Commentaire</label>
-                <textarea value= {this.state.comment} onChange={this.handleComments}></textarea>
-            </div>            
-        </form>
-          <p className= {myClass}>Style en props</p>      
-    </div>
-  )
+          )
     }
+  
 }
 
 export default Form
-
- 
