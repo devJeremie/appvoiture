@@ -1,4 +1,4 @@
-const Btn = ({btnStyle, children}) => {
+const Btn = ({btnStyle, children, handleClick}) => {
     
     const customBtn = {
     backgroundColor: "gray",
@@ -13,8 +13,12 @@ const Btn = ({btnStyle, children}) => {
     margin: '5px auto' 
     }
 
-    return (
-        <button style={{...customBtn, ...btnStyle}}>{children}</button>
+ return (
+        
+        <button 
+            onClick={handleClick}
+            style={{...customBtn, ...btnStyle}}>{children}
+        </button>
     )
 }
 

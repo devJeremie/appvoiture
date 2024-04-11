@@ -21,6 +21,24 @@ const success = {
     backgroundColor: 'green',
     color: 'black'
 }
+const red = {
+    backgroundColor: 'red',
+    color: 'white'
+}
+const blue = {
+    backgroundColor: 'blue',
+    color: 'white'
+}
+
+const sayHello = () => {
+    alert('Hello World');
+}
+const sayGoodbye = () => {
+    alert('GoodBye World');
+}
+const ReactEnd = () => {
+    alert('Welcome Hooks');
+}
 
 
 class Form extends Component {
@@ -33,7 +51,16 @@ class Form extends Component {
                 <button className='btn btn-primary'>Valider</button>
                 <Button>Valider 2</Button>
                 <Btn 
+                    handleClick={sayHello}
                     btnStyle={success}
+                > Cliquez sur ce bouton</Btn>
+                <Btn 
+                    handleClick={sayGoodbye}
+                    btnStyle={blue}
+                > Cliquez sur ce bouton</Btn>
+                <Btn 
+                    handleClick={ReactEnd}
+                    btnStyle={red}
                 > Cliquez sur ce bouton</Btn>
             </div>
           )
