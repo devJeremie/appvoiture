@@ -19,6 +19,7 @@ class App extends Component {
         <Mycars 
           title={this.state.titre} 
         />
+
         <Welcome />
         <Maman />
         <Image />
