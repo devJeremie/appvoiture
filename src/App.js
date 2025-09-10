@@ -10,6 +10,7 @@ class App extends Component {
 
   state = {
     titre: 'Mon Catalogue Voitures',
+    color: 'blue',
   }
  
 
@@ -18,6 +19,7 @@ class App extends Component {
       <div className='App'>
         <Mycars 
           title={this.state.titre} 
+          color={this.state.color} 
         />
 
         <Welcome />
