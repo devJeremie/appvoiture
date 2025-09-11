@@ -16,6 +16,8 @@ class App extends Component {
     })
   }
   //function qui change le titre via un bind
+  //un bind permet de fixer la valeur du this dans une fonction
+  //ici on fixe this a App et pas a l'evenement click 
   changeViaBind = (param) => {
     this.setState({
       titre : param
