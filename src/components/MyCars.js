@@ -50,7 +50,7 @@ class Mycars extends Component {
                             
                             <div key={index}>
                                 <Car
-                                    nom={name}
+                                    // nom={name}
                                     color={color}
                                     year={year}>
                                     {name}
