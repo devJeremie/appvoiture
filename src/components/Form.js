@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 import MyHead from './MyHeaderOne'
 import styles from './myCss.module.css'
 import styled from 'styled-components'

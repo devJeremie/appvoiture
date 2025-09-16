@@ -1,4 +1,5 @@
-import React from "react";
+import mySvg from './image/svg/abs5_csod_210125.jpg';
+
 
 const message = 'Photo de cheval dans le vent';
 const messUser = 'Icone user';
@@ -11,6 +12,7 @@ const Image = () => {
             <div>
                 <img src={require(`./image/userIcon.png`)} alt={messUser} width="80" height="80"></img>
             </div>
+            <img src={mySvg} alt="icone svg" width="100" height="100" />
         </div>
     );
 };
