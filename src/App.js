@@ -26,11 +26,11 @@ class App extends Component {
         <Welcome />
         <Maman />
         <Image />
-        <Form />
+        {/* <Form /> */}
         <FormBis />
-        {/* <Form 
+        <Form 
           head={true}
-        /> */}
+        />
       </div>
     )
   }

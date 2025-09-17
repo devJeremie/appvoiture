@@ -36,7 +36,8 @@ class FormBis extends Component {
     }
 
     handleSubmit = e => {
-        e.preventDefault()
+        e.preventDefault();
+        console.log(`Username: ${this.state.username}, Couleur: ${this.state.color}, Commentaire: ${this.state.comment}`);
     }
 
     render() {
@@ -79,7 +80,8 @@ class FormBis extends Component {
             <div>
                 <label>Commentaire</label>
                 <textarea value= {this.state.comment} onChange={this.handleComments}></textarea>
-            </div>            
+            </div>  
+            <button type="submit">Envoyer</button>          
         </form>
         <div>
             <h1 className={styles.green}>Le Commentaire numero 1</h1>
