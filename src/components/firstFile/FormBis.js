@@ -1,23 +1,24 @@
 import { Component} from 'react'
 import styled from 'styled-components'
 import MyHead from '../MyHeaderOne'
-import styles from './myCss.module.css'
+import styles from './../myCss.module.css'
 
 const titreBlue = {
     fontSize : '50px',  
     color: '#3498db' 
 }
 
-class Form extends Component {
+class FormBis extends Component {
     state = {
         username: '',
         color: '',
         colors: ["", "red", "green", "blue"],
         comment: ''
     }
-
-    handleUsername = e => {
+    // Fonction qui gère la saisie dans le champ "username"
+    handleUsername = e => { 
         this.setState({
+            // met à jour "username" avec la valeur saisie
             username : e.target.value
         })
     }
@@ -47,7 +48,13 @@ class Form extends Component {
         <form onSubmit={this.handleSubmit}>
             <div>
                 <label style={titreBlue}>Username</label>
-                <input type="text" value={this.state.username} onChange={this.handleUsername}/>
+                  {/* Champ texte contrôlé par React 
+                - value est lié à this.state.username
+                - onChange appelle handleUsername pour mettre à jour le state */}
+                <input type="text" 
+                       value={this.state.username} 
+                       onChange={this.handleUsername}
+                />
             </div>
             <div>
                 <label>Couleur</label>
@@ -58,7 +65,12 @@ class Form extends Component {
                 </select>
                 <select value={this.state.colors} onChange={this.handleColor}>
                     {
+                        // On parcourt le tableau this.state.colors avec map()
                         this.state.colors.map((color, index) => {
+                            // Chaque option correspond à une couleur du tableau
+                            // key = index -> identifiant unique (obligatoire pour React)
+                            // value = color -> ce qui sera stocké dans state.color quand choisie
+                            // {color} -> texte affiché à l'écran
                            return <option key={index} value={color}>{color}</option>
                         })
                     }
@@ -79,6 +91,6 @@ class Form extends Component {
     }
 }
 
-export default Form
+export default FormBis
 
  

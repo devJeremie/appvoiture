@@ -5,6 +5,7 @@ import './App.css';
 import Maman from './components/Maman';
 import Image from './components/Image';
 import Form from './components/Form';
+import FormBis from './components/firstFile/FormBis';
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
         <Maman />
         <Image />
         <Form />
+        <FormBis />
         {/* <Form 
           head={true}
         /> */}
