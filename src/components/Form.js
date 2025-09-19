@@ -19,7 +19,10 @@ const Button = styled.button
     `
 const success = {
     backgroundColor: 'green',
-    color: 'black'
+    color: 'black',
+    padding: '8px 15px',
+    margin: '2px auto',
+    borderRadius: '15px',
 }
 const red = {
     backgroundColor: 'red',
