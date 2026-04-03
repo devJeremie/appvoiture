@@ -19,7 +19,8 @@ class App extends Component {
     return (
       <div className='App'>
         <Mycars 
-          title={this.state.titre} 
+          title=
+          {this.state.titre} 
           color={this.state.color} 
         />
 
