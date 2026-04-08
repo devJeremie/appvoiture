@@ -23,6 +23,7 @@ class App extends Component {
           {this.state.titre} 
           color={this.state.color} 
         />
+        <button>Change le titre</button>
 
         <Welcome />
         <Maman />

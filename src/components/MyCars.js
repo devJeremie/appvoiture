@@ -41,7 +41,6 @@ class Mycars extends Component {
                <h1 style={{ color: this.props.color }}>
                    {this.props.title}
                </h1>
-
                 <button onClick={this.addtenYears}>+ 10 ans</button>
                 
                 {
