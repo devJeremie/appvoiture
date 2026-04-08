@@ -32,7 +32,6 @@ class MyCars extends Component {
                     </MyHeader>
                     <p onCopy={this.noCopy}>Voici le texte a ne pas copier</p>
                 </Wrapper>
-
                 <Car color='red'>{this.state.cars[0]}</Car>
                 <Car>{this.state.cars[1]}</Car>
                 <Car color='green'>{this.state.cars[2]}</Car>
