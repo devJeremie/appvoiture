@@ -7,14 +7,15 @@ class Mycars extends Component {
             {name: 'Ford', color: 'red', year: 2000},
             {name: 'Mercedes', color: 'black', year: 2010},
             {name: 'Peugeot', color: 'green', year: 2018},
-          ]
+        ]
     }
 
 //fonction pour vieillir un vehicule
     addtenYears = () => {
         const updatedState = this.state.voitures.map((param) =>{
-            // return param.year -=10;
-            return { ...param, year: param.year - 10 };
+            // return param.year -=10; on touche a l'objet initial
+            return { ...param, year: param.year - 10 }; //on recree un objet avec spreadOperator
+            // Ou : return Object.assign({}, param, { year: param.year - 10 });
         })
         this.setState({
             updatedState
