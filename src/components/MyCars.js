@@ -13,7 +13,8 @@ class Mycars extends Component {
 //fonction pour vieillir un vehicule
     addtenYears = () => {
         const updatedState = this.state.voitures.map((param) =>{
-            return param.year -=10;
+            // return param.year -=10;
+            return { ...param, year: param.year - 10 };
         })
         this.setState({
             updatedState
