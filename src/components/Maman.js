@@ -13,7 +13,6 @@ class Maman extends Component {
         
     reponseToto = msg => this.setState({messageToto: msg});
         
-
     render() {
         return (
             <div>
